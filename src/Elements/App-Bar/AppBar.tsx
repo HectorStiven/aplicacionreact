@@ -17,8 +17,8 @@ import { useState } from 'react';
 import { ImagenPortada } from './ImagenPortada';
 import { CustomizedSwitches } from './ModoOscuro';
 
-const pages = ['Inicio', 'Productos', 'pedidos', "Contacto"];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout',"perfil","s"];
+const pages = ['Inicio'];
+const settings = ['Nueva Funcion'];
 
 export const ResponsiveAppBar = ({set_entrar_aplicacion}:any) => {
     const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
@@ -48,7 +48,7 @@ export const ResponsiveAppBar = ({set_entrar_aplicacion}:any) => {
 
     return (
         < >
-            <AppBar position="static" style={{ backgroundColor: "yellow", color: "black" }}>
+            <AppBar position="static" style={{ backgroundColor: "#7171ff", color: "black" }}>
                 <Container maxWidth="xl" >
                     <Toolbar disableGutters >
                         <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -84,17 +84,18 @@ export const ResponsiveAppBar = ({set_entrar_aplicacion}:any) => {
 
 
                                 {pages.map((page) => (
-                                    <div key={page}>
-                                        <List style={{ width: 250 }}>
+                                    <div key={page} >
+                                        <List style={{ width: 250  }}>
                                             <ListItem
                                                 button
                                                 onClick={() => navigate(`/${page}`)}
                                                 sx={{
                                                     border: "1px solid black",
                                                     borderRadius: 1,
+                                            
                                                 }}
                                             >
-                                                <ListItemText>{page}</ListItemText>
+                                                <ListItemText >{page}</ListItemText>
                                             </ListItem>
                                         </List>
                                     </div>

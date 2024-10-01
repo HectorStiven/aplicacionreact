@@ -17,6 +17,9 @@ export const App = () => {
   const appStyle = {
     backgroundColor: modo_dark_numero,
     minHeight: '100vh',
+    margin: 0,
+    padding: 0,
+    transition: 'background-color 0.5s',
   };
 
 
