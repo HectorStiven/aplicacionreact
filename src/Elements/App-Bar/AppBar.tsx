@@ -6,10 +6,10 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
+// import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
+// import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Drawer, List, ListItem, ListItemText } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
@@ -17,19 +17,21 @@ import { useState } from 'react';
 import { ImagenPortada } from './ImagenPortada';
 import { CustomizedSwitches } from './ModoOscuro';
 
-const pages = ['Inicio'];
-const settings = ['Nueva Funcion'];
+// const pages = ['Catalogo','Carrito'];
+const pages = ['inicio'];
+// const settings = ['Nueva Funcion'];
 
 export const ResponsiveAppBar = ({set_entrar_aplicacion}:any) => {
     const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
     const [openDrawer, setOpenDrawer] = useState(false);
-    const [openDrawer_info, setOpenDrawer_info] = useState(false);
+    // const [openDrawer_info, setOpenDrawer_info] = useState(false);
 
     const navigate = useNavigate();
 
 
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
+        set_entrar_aplicacion(false);
     };
 
     // Funciones para abrir/cerrar menú
@@ -42,13 +44,13 @@ export const ResponsiveAppBar = ({set_entrar_aplicacion}:any) => {
     };
 
 
-    const handleOpenDrawer = () => {
-        setOpenDrawer_info(true); // Abre el cajón
-    };
+    // const handleOpenDrawer = () => {
+    //     // setOpenDrawer_info(true); // Abre el cajón
+    // };
 
     return (
         < >
-            <AppBar position="static" style={{ backgroundColor: "#7171ff", color: "black" }}>
+            <AppBar position="static" style={{ backgroundColor: "#ff8f00", color: "blac" }}>
                 <Container maxWidth="xl" >
                     <Toolbar disableGutters >
                         <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -67,7 +69,7 @@ export const ResponsiveAppBar = ({set_entrar_aplicacion}:any) => {
                                 textDecoration: 'none',
                             }}
                         >
-                            PLANTILLA
+                            TEC 2.0
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -147,9 +149,9 @@ export const ResponsiveAppBar = ({set_entrar_aplicacion}:any) => {
                                     </IconButton>
 
 
-                                    <IconButton onClick={handleOpenDrawer} sx={{ p: 0 }}>
+                                    {/* <IconButton onClick={handleOpenDrawer} sx={{ p: 0 }}>
                                         <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                                    </IconButton>
+                                    </IconButton> */}
                                 </>
                             </Tooltip>
 
@@ -169,7 +171,7 @@ export const ResponsiveAppBar = ({set_entrar_aplicacion}:any) => {
                                 open={Boolean(anchorElUser)}
                                 onClose={handleCloseUserMenu}
                             >
-
+{/* 
                                 <Drawer
                                     open={openDrawer_info} // Utiliza un estado booleano para controlar la apertura del Drawer
                                     onClose={() => setOpenDrawer_info(false)} // Función para cerrar el Drawer
@@ -192,7 +194,7 @@ export const ResponsiveAppBar = ({set_entrar_aplicacion}:any) => {
                                     >
                                         salir
                                     </Button>
-                                </Drawer>
+                                </Drawer> */}
 
 
 

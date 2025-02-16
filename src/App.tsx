@@ -4,13 +4,13 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { RutasPrincipales } from './routes/RutasPrincipales';
 import { AlertasContext } from './Elements/Context/ContextModoDark';
 import { useContext, useState } from 'react';
-import { LoginBase } from './Login/LoginBase';
+// import { LoginBase } from './Login/LoginBase';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const App = () => {
 
-  const [entrar_aplicacion, set_entrar_aplicacion] = useState<boolean>(false);
+  const [ set_entrar_aplicacion] = useState<boolean>(false);
   const { modo_dark_numero } = useContext(AlertasContext);
 
   // Establece el fondo en función del valor de modo_dark_numero
@@ -27,18 +27,18 @@ export const App = () => {
 
   return (
     <div className="App" style={appStyle}>
-      {entrar_aplicacion === false && (
+      {/* {entrar_aplicacion === false && (
         <LoginBase set_entrar_aplicacion={set_entrar_aplicacion} />
       )}
 
 
-      {entrar_aplicacion && (
+      {entrar_aplicacion && ( */}
         <Router>
           <ResponsiveAppBar set_entrar_aplicacion={set_entrar_aplicacion} />
 
           <RutasPrincipales />
         </Router>
-      )}
+      {/* )} */}
       <ToastContainer />
     </div>
   );
