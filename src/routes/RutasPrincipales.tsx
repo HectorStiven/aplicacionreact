@@ -3,6 +3,8 @@ import { AgendaPermisos } from "../Components/Daniela/PantallaCompleta2";
 // import { EvaluacionProductos } from "../Components/Daniela/PantallaCOmpleta";
 // import { Catalogo } from "../Components/Catalogo/CatalogoContainer";
 // import { Carrito } from "../Components/Carrito/CarritoPantallaPrincipal";
+// import { Carrito } from "../Components/Carrito/CarritoPantallaPrincipal";
+
 
 export const RutasPrincipales = () => {
   return (
